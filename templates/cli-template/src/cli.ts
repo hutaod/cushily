@@ -1,7 +1,7 @@
 import cac from "cac"
 
-// 声明 cli `名称`和`版本`
-const cli = cac("xxx").version("0.0.0")
+// 声明 cli `名称`、`版本` 以及 帮助信息
+const cli = cac("xxx").version("0.0.0").help()
 
 // 声明 开发-dev 命令
 cli.command('dev [root]', 'start dev server').action(async (root: string) => {
