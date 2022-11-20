@@ -3,6 +3,8 @@
     "module": "CommonJS",
     "outDir": "dist",
     "rootDir": "./src",
-    "target": "ESNext"
-  }
+    "target": "ESNext",
+    "jsx": "react-jsx"
+  },
+  "exclude": ["templates/"]
 }
