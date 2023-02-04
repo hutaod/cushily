@@ -11,6 +11,8 @@
     "cushily": "bin/cushily.js"
   },
   "scripts": {
+    "docs:dev": "next dev",
+    "docs:build": "next build & next export",
     "build": "turbo run build",
     "build:local": "turbo run build:local",
     "build:dev": "turbo run build:dev",
@@ -49,6 +51,8 @@
   "dependencies": {
     "@vitejs/plugin-react": "^2.2.0",
     "cac": "^6.7.14",
+    "nextra": "^2.2.14",
+    "nextra-theme-docs": "^2.2.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite": "3.2.1"
