@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "module": "CommonJS",
-    "outDir": "dist",
-    "rootDir": "./src",
-    "target": "ESNext",
-    "resolveJsonModule": true,
-  }
-}

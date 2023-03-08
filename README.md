@@ -1,52 +1,63 @@
-# 前端探索
+# cushily
 
-这是一个关于前端方案和技术探索的博客网站:（皆未开始）
+front-end development program
 
-通用方案：(2023年上半年)
+## What's inside?
 
-- [**@cushily/create-next-app:**](https://htonlinezone.cn/cna) 创建完整next.js应用的脚手架
-- [**@cushily/eslint-config:**](https://htonlinezone.cn/hooks) eslint config
-- [**@cushily/eslint-plugin:**](https://htonlinezone.cn/hooks) eslint plugin
-- [**@cushily/tsconfig:**](https://htonlinezone.cn/hooks) tsconfig
-- [**@cushily/stylelint:**](https://htonlinezone.cn/hooks) stylelint
-- [**@cushily/react-i18n-tool:**](https://htonlinezone.cn/i18n) react 接入i18n的套件，包括nextjs框架
-- [**@cushily/hooks:**](https://htonlinezone.cn/hooks) react hooks
+This cushily uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
 
+### Apps and Packages
 
-技术基础探索：
+- `docs`: a [Next.js](https://nextjs.org/) app
+- `h5`: a [Next.js](https://nextjs.org/) h5 app template
+- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
-- 前端框架类： (2023年上半年)
-  - [**@cushily/view:**](https://htonlinezone.cn/hooks) 类似 react 的前端框架
-  - [**@cushily/view-dom:**](https://htonlinezone.cn/hooks) 类似 react-dom
-  - [**@cushily/redux:**](https://htonlinezone.cn/hooks) 类似 redux
-  - [**@cushily/mobx:**](https://htonlinezone.cn/hooks) 类似 mobx
-  - [**@cushily/immer:**](https://htonlinezone.cn/hooks) 类似 immer
-  - [**@cushily/i18next:**](https://htonlinezone.cn/hooks) 类似 i18next
-  - [**@cushily/lodash:**](https://htonlinezone.cn/hooks) 类似 lodash
-  - [**@cushily/dayjs:**](https://htonlinezone.cn/hooks) 类似 dayjs
-- 编译/构建工具类 (2023年下半年)
-  - [**@cushily/pack:**](https://htonlinezone.cn/hooks) 类似 webpack/vite 的打包工具
-  - [**@cushily/babel:**](https://htonlinezone.cn/hooks) 类似 babel
-  - [**@cushily/typescript:**](https://htonlinezone.cn/hooks) 类似 typescript
-  - [**@cushily/sass:**](https://htonlinezone.cn/hooks) 类似 sass
-  - [**@cushily/postcss:**](https://htonlinezone.cn/hooks) 类似 postcss
-- 代码规范类： (2023年下半年)
-  - [**@cushily/eslint:**](https://htonlinezone.cn/hooks) 类似 eslint
-  - [**@cushily/prettier:**](https://htonlinezone.cn/hooks) 类似 prettier
-- 辅助工具类
-  - [**@cushily/chalk:**](https://htonlinezone.cn/hooks) 类似 chalk
-  - [**@cushily/repo:**](https://htonlinezone.cn/hooks) 类似 lerna/turborepo
-- 常规css生成库
-  - [**@cushily/tailwindcss:**](https://htonlinezone.cn/hooks) 类似 tailwindcss
-- ui库 (2023年上半年)
-  - [**@cushily/pc-ui:**](https://htonlinezone.cn/hooks) 类似 antd
-  - [**@cushily/mobile-ui:**](https://htonlinezone.cn/hooks) 类似 antd-mobile
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
+### Build
 
-应用探索：
-- [**@cushily/nextra:**](https://htonlinezone.cn/hooks) 类似 nextra (2023年上半年)
+To build all apps and packages, run the following command:
 
+```
+pnpm run build
+```
 
-## 目的
+### Develop
 
-集成前端通用的技术方案
+To develop all apps and packages, run the following command:
+
+```
+pnpm run dev
+```
+
+### Remote Caching
+
+Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+
+By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+
+```
+cd my-turborepo
+pnpm dlx turbo login
+```
+
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+
+```
+pnpm dlx turbo link
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
+- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
+- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
+- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
+- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
+- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
