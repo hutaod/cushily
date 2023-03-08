@@ -1,13 +1,33 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": [
+        "dist/**/*.d.ts",
+        "dist/**/*.mjs",
+        "dist/**/*.js",
+        "dist/**/*.css",
+        ".next/**",
+        "index.js",
+        "ssg.js",
+        "loader.js"
+      ]
     },
-    "lint": {
+    "build:tailwind": {
+      "dependsOn": [],
+      "outputs": ["style.css"]
+    },
+    "test": {},
+    "types:check": {
+      "dependsOn": [],
       "outputs": []
+    },
+    "format": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
     },
     "dev": {
       "cache": false
